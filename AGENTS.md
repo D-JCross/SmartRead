@@ -1,5 +1,3 @@
-
-
 AGENTS.md — SmartRead
 
 How I want AI to work
@@ -22,9 +20,9 @@ The features I want preserved are:
 
 
 
-Click any word, including at the bottom of a page, and start reading from that word.
+Click any word, and start reading from that word.
 
-Highlight the word being spoken with one yellow rectangle, not a different highlighting style.
+Highlight the word being spoken with one yellow rectangle.
 
 Scroll smoothly with the narration and continue onto the next page.
 
@@ -44,15 +42,13 @@ Instructions for code changes:
 
 
 
-Give me full file paths to prevent confusion.
-
-When changing code, provide the complete replacement, not snippets or patches.
+When changing code, provide a complete working replacement,
 
 Put the code directly in the chat, and include the exact Windows path for each file.
 
 Make sure nothing is cut off. Check the includes, declarations, matching header, and closing braces before sending anything. I've had incomplete files cause hundreds of compiler errors.
 
-Fix what I actually reported. Don't rewrite or change anything but the task we are focused on. 
+Fix what I actually reported. Don't rewrite or change anything but the task we are focused on.
 
 Keep edits as small as possible.
 
@@ -64,15 +60,9 @@ Respect earlier working versions. If I say version 1.4 worked better, use that a
 
 
 
-What my testing taught me:
+What My Testing Taught Me:
 
 
 
-The hardest bug was the word highlight jumping to random parts of a PDF. The voice still read from the word I clicked correctly. After testing, I found that the first click worked, but problems appeared when I clicked a second time. That mattered because it pointed toward speech-session handling, not a general failure to start narration.
-
-
-
-I wanted the AI to pay attention to those details instead of repeatedly replacing large sections of code. One fix changed the highlighting style I liked; other replacements broke clicking or scrolling. I also ran into truncated .cpp files. Those experiences are why I insist on targeted debugging and complete source files.
-
-
+The hardest part of developing SmartRead was implementing new features without ChatGPT accidentally breaking parts of the application that already worked. I often asked for one specific change, but the AI would rewrite unrelated sections of code, sometimes introducing new bugs or removing functionality I had spent hours getting right. Because of this, I learned to regularly save backup versions of my working code before making changes. I ended up reverting to these backups quite often when AI-generated modifications caused more problems than they solved. This taught me the importance of version control, testing changes individually, and maintaining control over my project instead of blindly trusting every solution the AI provided.
 
