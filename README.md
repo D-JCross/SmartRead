@@ -1,4 +1,4 @@
-# SmartRead
+# README.md — SmartRead
 
 **SmartRead** is a Windows desktop PDF reader built in **C++17 with Qt 6**. It combines a traditional, page-based PDF viewing experience with offline text-to-speech narration so users can listen to a document while following along visually.
 
