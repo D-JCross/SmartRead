@@ -2,7 +2,7 @@
 
 **SmartRead** is a Windows desktop PDF reader built in **C++17 with Qt 6**. It combines a traditional, page-based PDF viewing experience with offline text-to-speech narration so users can listen to a document while following along visually.
 
-The project began as an AI-assisted C++ graphical user interface assignment at **SUNY Broome Community College**. Its guiding idea is simple: **keep the PDF looking like a PDF**, instead of replacing it with a plain text transcript, while making spoken reading easier to follow and control.
+The project began as an AI-assisted C++ graphical user interface assignment. Its guiding idea is simple: **keep the PDF looking like a PDF**, make the reading experience nicer.
 
 > \*\*Project status:\*\* SmartRead has been developed and packaged for Windows. The feature descriptions below document the design and development requirements discussed throughout the project; availability and reliability of individual behaviors should be checked against the specific release being downloaded. In particular, word-highlight synchronization after repeated click-to-read actions was an area of active debugging.
 
