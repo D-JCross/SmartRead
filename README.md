@@ -119,8 +119,6 @@ The reading modes control which text is selected for narration. Story Mode attem
 
 An important issue discovered during development involved **click-to-read and highlighting becoming out of sync**. The spoken narration could start at the correct word, but the yellow rectangle sometimes jumped to a different location after the user clicked a second word. This distinction helped narrow the investigation: the problem was not necessarily PDF text selection or speech starting at the wrong word, but potentially how the active speech request and word-position updates were coordinated.
 
-The team investigated stale speech-progress callbacks and the need to associate updates with the current narration session. **This documents a debugging investigation, not a claim that the issue has been fully resolved in every build.**
-
 ## Limitations
 
 * **Text-based PDFs:** Scanned pages and image-only PDFs are not currently documented as supported. OCR was not established as an implemented feature.
